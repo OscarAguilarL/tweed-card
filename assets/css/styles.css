@@ -109,6 +109,30 @@ body {
     display: none;
 }
 
+.bodyContent-likeButton {
+    display: flex;
+    align-items: center;
+}
+
+.likeButton {
+    block-size: 48px;
+    inline-size: 48px;
+    border: none;
+    background-color: var(--bg);
+    background-image: url('../img/heart.png');
+    background-size: 1450px 48px;
+}
+
+.is-liked {
+    animation: like 1s steps(28, end) forwards;
+}
+
+@keyframes like {
+    100% {
+        background-position-x: -2800px;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .profile-picture {
         max-block-size: 64px;
