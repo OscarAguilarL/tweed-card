@@ -24,7 +24,70 @@ body {
 }
 
 .wrapper {
-    border: 1px solid red;
     max-inline-size: 700px;
-    margin: 0 auto;
+    margin: auto;
+}
+
+.tweet-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    border: 1px solid red;
+    width: 100%;
+    padding: 1rem;
+}
+
+.profile-picture {
+    max-block-size: 48px;
+    max-inline-size: 48px;
+}
+.profile-picture img {
+    block-size: 100%;
+    inline-size: 100%;
+}
+
+.tweet-body .tweet-username {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.tweet-username .name {
+    font: var(--body2-bold);
+}
+
+.tweet-username .at {
+    font: var(--body2-regular);
+    color: var(--grey);
+}
+
+.tweet-bodyContent {
+    font: var(--body2-regular);
+}
+
+.bodyContent-link {
+    color: var(--blue);
+}
+
+@media screen and (min-width: 768px) {
+    .profile-picture {
+        max-block-size: 64px;
+        max-inline-size: 64px;
+    }
+
+    .tweet-body .tweet-username {
+        flex-direction: row;
+    }
+
+    .tweet-username .name {
+        font: var(--body1-bold);
+    }
+    .tweet-username .at {
+        font: var(--body1-regular);
+    }
+
+    .tweet-bodyContent {
+        font: var(--body1-regular);
+    }
+
 }
