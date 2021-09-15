@@ -20,5 +20,11 @@
 body {
     font-family: var(--baseFont);
     background-color: var(--bg);
-    color: var(--white)
+    color: var(--white);
+}
+
+.wrapper {
+    border: 1px solid red;
+    max-inline-size: 700px;
+    margin: 0 auto;
 }
