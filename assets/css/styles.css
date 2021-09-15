@@ -32,7 +32,7 @@ body {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
-    border: 1px solid red;
+    border: 1px solid var(--grey);
     width: 100%;
     padding: 1rem;
 }
@@ -69,6 +69,46 @@ body {
     color: var(--blue);
 }
 
+.bodyContent-card {
+    color: unset;
+    text-decoration: none;
+    border: 1px solid var(--grey);
+    border-radius: 24px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    gap: 1rem;
+}
+
+.card-title,
+.card-description {
+    font: var(--body2-regular);
+}
+
+.card-img {
+    inline-size: 92px;
+    block-size: 82px;
+    aspect-ratio: 1 / 1;
+}
+
+.card-img img {
+    inline-size: 100%;
+    block-size: 100%;
+}
+
+.card-content {
+    padding-inline-end: 1rem;
+}
+
+.card-source {
+    color: var(--grey);
+}
+
+.card-description {
+    display: none;
+}
+
 @media screen and (min-width: 768px) {
     .profile-picture {
         max-block-size: 64px;
@@ -90,4 +130,29 @@ body {
         font: var(--body1-regular);
     }
 
+    .card-title,
+    .card-description {
+        font: var(--body1-regular);
+    }
+
+    .card-description {
+        display: block;
+        font: var(--body1-regular);
+        color: var(--grey);
+    }
+
+    .card-source {
+        display: none;
+    }
+
+    .card-img {
+        inline-size: 160px;
+        block-size: 144px;
+        aspect-ratio: 1 / 1;
+    }
+
+    .card-img img {
+        inline-size: 100%;
+        block-size: 100%;
+    }
 }
